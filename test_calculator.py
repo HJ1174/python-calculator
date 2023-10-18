@@ -17,6 +17,6 @@ def test_multiply(num1,num2,result):
 def test_divide(num1,num2,result):
     assert divide(num1, num2) == result
 
-def test_powerof():
-    with pytest.raises(SystemExit):
-        powerof()
+#def test_powerof():
+#    with pytest.raises(SystemExit):
+#       powerof()

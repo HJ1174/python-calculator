@@ -19,6 +19,7 @@ jobs:
         repository: sandytangps/calculator
         #path: <folder of choice>
         #token: ${{ secrets.MY_TOKEN }}
+    - name: get repo
       run: |
         $testFile = find sandytangps/calculator -type f -name 'test_*'
 

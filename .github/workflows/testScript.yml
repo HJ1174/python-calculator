@@ -16,11 +16,11 @@ jobs:
     - name: Checkout private repo remotely
       uses: actions/checkout@v4
       with:
-        repository: HJ1174/python-calculator
+        repository: sandytangps/calculator
         #path: <folder of choice>
-        token: ${{ secrets.MY_TOKEN }}
-          run: |
-          $testFile = find . -type f -name 'test_*'
+        #token: ${{ secrets.MY_TOKEN }}
+      run: |
+        $testFile = find sandytangps/calculator -type f -name 'test_*'
 
     - name: Set up Python
       uses: actions/setup-python@v4

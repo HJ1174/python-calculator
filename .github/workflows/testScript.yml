@@ -19,8 +19,8 @@ jobs:
         repository: HJ1174/python-calculator
         #path: <folder of choice>
         token: ${{ secrets.MY_TOKEN }}
-      run: |
-        $testFile = find . -type f -name 'test_*'
+          run: |
+          $testFile = find . -type f -name 'test_*'
 
     - name: Set up Python
       uses: actions/setup-python@v4

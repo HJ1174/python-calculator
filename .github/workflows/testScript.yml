@@ -14,7 +14,7 @@ jobs:
     
     - name: copy script
       run: |
-        sudo wget https://raw.githubusercontent.com/sandytangps/calculator/main/test_calculator_new.py -O /testScript.py
+        sudo wget https://raw.githubusercontent.com/sandytangps/calculator/main/test_calculator_new.py -O testScript.py
 #    - name: Checkout private repo remotely
 #      uses: actions/checkout@v4
 #      with:

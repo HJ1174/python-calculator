@@ -26,14 +26,13 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: 3.x
+
     - name: Install python
       run: |
         python -m pip install --upgrade pip
+  
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest  testScript.py 
-#--junitxml=junit/test-results.xml
-#    - name: if py test is success
-#      if: ${{success()}}
+        pytest  testScript.py --junitxml=junit/test-results.xml
         

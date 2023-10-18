@@ -34,6 +34,6 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pytest $testFile --junitxml=junit/test-results.xml
-    - name: if py test is success
-      if: ${{success()}}
-        tag: wellDone
+#    - name: if py test is success
+#      if: ${{success()}}
+        

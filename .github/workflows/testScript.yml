@@ -36,4 +36,4 @@ jobs:
         pytest $testFile --junitxml=junit/test-results.xml
     - name: if py test is success
       if: ${{success()}}
-        tag: pytest-success
+        tag: wellDone

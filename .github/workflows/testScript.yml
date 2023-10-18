@@ -21,7 +21,7 @@ jobs:
         #token: ${{ secrets.MY_TOKEN }}
     - name: get repo
       run: |
-        $testFile = ${find sandytangps/calculator -type f -name 'test_*')
+        $testFile = ${find sandytangps/calculator -type f -name 'test_*'}
 
     - name: Set up Python
       uses: actions/setup-python@v4

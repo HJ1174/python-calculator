@@ -9,9 +9,12 @@ jobs:
     runs-on: Ubuntu-latest
 
     steps:
-
     - name: checkout my codes
       uses: actions/checkout@v4
+    
+    - name: extract the script
+      run: |
+        git fetch ./calculator.py
         
     - name: Checkout private repo remotely
       uses: actions/checkout@v4
@@ -21,7 +24,10 @@ jobs:
         #token: ${{ secrets.MY_TOKEN }}
     - name: get repo
       run: |
-        $testFile = ${find . -type f -name 'test_*'}
+        ls -alch
+        git fetch ./test_calculator.py
+      #run: |
+      #  $testFile = ${find . -type f -name 'test_*'}
 
     - name: Set up Python
       uses: actions/setup-python@v4

@@ -11,10 +11,8 @@ jobs:
     steps:
     - name: checkout my codes
       uses: actions/checkout@v4
-    
-    - name: extract the script
-      run: |
-        git fetch HJ1174/python-calculator/calculator.py
+      with:
+        path: main
         
     - name: Checkout private repo remotely
       uses: actions/checkout@v4
@@ -22,12 +20,7 @@ jobs:
         repository: sandytangps/calculator
         #path: <folder of choice>
         #token: ${{ secrets.MY_TOKEN }}
-    - name: get repo
-      run: |
-        ls -alch
-        git fetch sandytangps/calculator/test-calculator_new.py
-      #run: |
-      #  $testFile = ${find . -type f -name 'test_*'}
+        path: testScript
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -40,7 +33,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        pytest $testFile --junitxml=junit/test-results.xml
+        pytest  testScript.calculator.py --junitxml=junit/test-results.xml
 #    - name: if py test is success
 #      if: ${{success()}}
         

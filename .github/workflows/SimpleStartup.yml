@@ -12,7 +12,7 @@ jobs:
         steps:
 
         - name: checkout my codes
-          uses: actions/checkout@v4
+          uses: actions/checkout@v2
 
         - name: Print and list out content
           run: |
@@ -24,7 +24,7 @@ jobs:
           with:
             repository: lowkh/hiddenRepo
             #path: <folder of choice>
-            token: ${{ secrets.REMOTE_TOKEN }}
+            token: ${{ secrets.REMOTE_SECRETS }}
         - name: Show hidden files
           run: |
             ls -alch

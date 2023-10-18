@@ -16,9 +16,9 @@ jobs:
     - name: Checkout private repo remotely
       uses: actions/checkout@v4
       with:
-        repository: https://github.com/sandytangps/calculator.git
+        repository: HJ1174/python-calculator
         #path: <folder of choice>
-        #token: ${{ secrets。ANOTHER_TOKEN }}
+        token: ${{ secrets.MY_TOKEN }}
       run: |
         $testFile = find . -type f -name 'test_*'
 

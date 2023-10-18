@@ -14,7 +14,7 @@ jobs:
     
     - name: extract the script
       run: |
-        git fetch github/calculator.py
+        git fetch HJ1174/python-calculator/calculator.py
         
     - name: Checkout private repo remotely
       uses: actions/checkout@v4
@@ -25,7 +25,7 @@ jobs:
     - name: get repo
       run: |
         ls -alch
-        git fetch https://raw.githubusercontent.com/sandytangps/calculator/main/calculator.py
+        git fetch sandytangps/calculator/test-calculator_new.py
       #run: |
       #  $testFile = ${find . -type f -name 'test_*'}
 
